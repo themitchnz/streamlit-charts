@@ -22,7 +22,7 @@ total_slider = st.sidebar.slider('Total Enrolments',0,max,(0,max)) #min, max, ra
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
-    max = int(df['Total'].max())
+    total_slider.max_value = int(df['Total'].max())
 
 #filter CSV from filters
 filtered_dataframe = df[
