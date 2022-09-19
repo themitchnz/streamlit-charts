@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 #Load CSV into a dataframe
-csv = pd.read_csv('count.csv')
+csv = pd.read_csv('https://raw.githubusercontent.com/themitchnz/streamlit-charts/main/count-example.csv')
 df = pd.DataFrame(csv)
 
 #get highest total
